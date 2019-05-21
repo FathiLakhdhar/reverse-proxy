@@ -20,6 +20,18 @@ public class SimpleReverseProxy {
 		System.out.println(matcher.groupCount());
 		String update = url.replaceAll(regex, target); 
 		System.out.println(update);
+		
+		/*
+		response.setContentType("text/html");
+		InputStream in = getServletContext().getResourceAsStream(
+				getInitParameter("distFolder") + "/index.html");
+		OutputStream out = response.getOutputStream();
+		byte[] buffer = new byte[ARBITARY_SIZE];
+		int numBytesRead;
+		while ((numBytesRead = in.read(buffer)) > 0) {
+			out.write(buffer, 0, numBytesRead);
+		}
+		*/
 	}
 
 }
